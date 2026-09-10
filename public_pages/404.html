@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404- Not Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+    :root {
+--prim: #ffcf99;
+--secondary: #f15156;
+
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, var(--secondary), var(--prim));
+  }
+  
+    .bg-white {
+      background-color: #ffffff;
+    }
+
+    .text-dark {
+      color: #333;
+    }
+
+    .text-muted {
+      color: #777;
+    }
+
+    .link-primary {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      padding: 2.5rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      width: 320px;
+    }
+
+    .login-form h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .login-form p {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--prim);
+      color: white;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--secondary);
+    }
+
+    .center-button {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body class="bg-gradient text-dark">
+
+  <div class="login-container bg-white">
+    <div class="login-form">
+      <h2>404</h2>
+      <p class="text-muted">We couldn't find the page you were looking for. Please try again later.</p>
+      <div>
+        
+        <a href="/" class="btn-primary center-button">Go to Homepage</a>
+        
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <style>
+    /* Some basic styling */
+    .transaction-entry {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Transactions for Card ID: <span id="card-id">Loading...</span></h2>
+  <div id="transactions-container">
+    <p>Loading...</p>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get the card ID from the URL query string
+      const cardId = new URLSearchParams(window.location.search).get("card");
+
+      if (!cardId) {
+        document.getElementById("transactions-container").innerHTML = "<p>Card ID missing!</p>";
+        return;
+      }
+
+      // Display the Card ID in the title
+      document.getElementById("card-id").textContent = cardId;
+
+       fetch(`/api/transactions-param?card=${cardId}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.message && Array.isArray(data.message)) {
+            console.log(data.message)
+            const transactionsContainer = document.getElementById("transactions-container");
+            transactionsContainer.innerHTML = data.message.map(tx => `
+              <div class="transaction-entry">
+                <span>${tx.desc} - $${tx.amount}</span>
+                <span>${tx.date}</span>
+              </div>
+            `).join("");
+          } else {
+            document.getElementById("transactions-container").innerHTML = "<p>No transactions found for this card.</p>";
+          }
+        })
+        .catch(err => {
+          console.error("Error fetching transactions:", err);
+          document.getElementById("transactions-container").innerHTML = "<p>Something went wrong!</p>";
+        });
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wallet | ClassCash</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles/home.css"/>
+  <link rel="stylesheet" href="styles/transactions.css"/>
+  <script defer src="scripts/utils.js"></script>
+  <script defer src="scripts/transactions.js"></script>
+
+</head>
+<body class="bg-gradient">
+
+  <div class="loader"><div class="innerloader"></div></div>
+
+<header>
+  <div id="maindiv">
+    <div id="leftdiv">
+      <h1>ClassCash</h1>
+    </div>
+
+    <input type="checkbox" id="sidebar-checkbox">
+    <label for="sidebar-checkbox" class="overlay"></label>
+
+    <label for="sidebar-checkbox" id="open-sidebar">
+      <span class="material-symbols-outlined">menu</span>
+    </label>
+
+    <div class="links">
+      <label for="sidebar-checkbox" id="close-sidebar">✖</label>
+      <a href="/home">Home</a>
+      <a href="/wallet">Wallet</a>
+      <a href="/settings">Settings</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container bg-white wallet-header">
+    <h2 id="student-name">Card</h2>
+    <div class="profile-icon">👤</div>
+  </div>
+
+<button id="back-button" onclick="back()">Back</button>
+<p id="page"><input type="number" id="currentPage" >/<span id="totalPages"></span> </p>
+<button id="next-button" class="btn-primary" onclick="next()">Next</button>
+
+  <div id="wallet-cards-container">  
+    <div class="wallet-card">
+        <div class="transactions-list">
+</div>
+ </div>
+</main>
+</body>
+</html>

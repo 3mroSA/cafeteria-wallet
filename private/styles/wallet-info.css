@@ -1,0 +1,130 @@
+:root {
+  --prim: #ffcf99;
+  --secondary: #f15156;
+  
+  }
+
+ 
+
+
+
+
+#user h3 {
+  margin-bottom: 10px;
+}
+
+#user .info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: #333;
+}
+
+#user {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 270px;
+  max-height: 80vh; 
+  overflow-y: auto;  
+  background-color: white;
+    border-radius: 1rem;
+padding: 10px 20px;
+}
+
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-icon {
+  font-size: 2rem;
+}
+
+.wallet-card {
+  background-color: #ffffff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  
+}
+
+.wallet-card h3 {
+  margin-bottom: 10px;
+}
+
+.wallet-card .info-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  color: #333;
+}
+
+#wallet-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  max-height: 80vh; 
+  overflow-y: auto;  
+}
+
+#wallet-cards-container::-webkit-scrollbar {
+  width: 8px;  
+}
+#wallet-cards-container::-webkit-scrollbar-track {
+  background: transparent; 
+}
+#wallet-cards-container::-webkit-scrollbar-thumb {
+  background-color: var(--secondary); 
+  border-radius: 4px; 
+}
+
+#wallet-cards-container {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--secondary) transparent; 
+}
+
+.wallet-card .actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.wallet-card button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--prim);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.wallet-card button:hover {
+  background-color: var(--secondary);
+}
+
+.transactions-list {
+  margin-top: 15px;
+}
+
+.transaction-entry {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-entry span {
+  font-size: 0.95rem;
+}
+.error-message {
+  color: var(--secondary);
+  margin-top: 5px;
+}

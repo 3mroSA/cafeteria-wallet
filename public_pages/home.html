@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home | ClassCash </title>
+
+
+  <script defer src="scripts/utils.js"></script>
+  <script defer src="scripts/home.js"></script>
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/home.css"/>
+</head>
+<body class="bg-gradient">
+<div class="loader"><div class="innerloader"></div></div>
+  
+<header>
+  <div id="maindiv">
+    <div id="leftdiv">
+      <h1>ClassCash</h1>
+    </div>
+
+
+    <input type="checkbox" id="sidebar-checkbox">
+    <label for="sidebar-checkbox" class="overlay"></label>
+
+    <label for="sidebar-checkbox" id="open-sidebar">
+      <span class="material-symbols-outlined">menu</span>
+          </label>
+
+
+<div class="links">
+  <label for="sidebar-checkbox" id="close-sidebar">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>    
+</label>
+  <a href="/home">Home</a>
+  <a href="/wallet">Wallet</a>
+  <a href="/settings">Settings</a>
+  <a href="/logout">Logout</a>
+
+</div>      
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="container nameDIV bg-white">
+    <h1 >Hello, <span style="text-transform: capitalize;" id="name">.</span>!</h1>
+    <div id="data">
+      <ul class="shadow-lg">
+        <li>Total Cards: <span id="totalcards"></span>/5</li>
+        <hr class="divider">
+        <li>Balance: <span id="totalbalance"></span> SAR</li>
+      </ul>
+    </div>
+    <button onclick="window.location.href='/create'" style="margin-top: 25px;" class="btn-primary">Add Card</button>
+  </div>
+
+
+  <!-- <div class="container bg-white">
+    <h2 class="text-dark">Recent transactions:</h2>
+    <p class="text-muted">Account wide transactions</p>
+    <ul class="shadow-lg transactions">
+      
+
+      </ul>
+    <div id="transactions"></div>
+  </div> -->
+
+
+
+</main>
+
+
+
+
+</body>
+</html>

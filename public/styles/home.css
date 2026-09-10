@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+:root {
+  --prim: #ffcf99;
+  --secondary: #f15156;
+
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, var(--secondary), var(--prim));
+}
+
+body.bg-gradient {
+  background:
+    url('https://www.transparenttextures.com/patterns/white-wall-3.png'),
+    linear-gradient(135deg, var(--secondary), var(--prim));
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-muted {
+  color: #777;
+}
+
+.link-primary {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.container {
+  width: 100%;
+  max-width: 60px;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+
+.form h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--prim);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.footer span {
+  color: #aaa;
+}
+
+#responsebx {
+  color: var(--prim);
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(58, 48, 48, 0.338);
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  display: none;
+}
+
+.innerloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--secondary);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* border-radius: 50px; */
+
+  position: absolute;
+  /* top: 20px; or whatever vertical distance you want */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+
+#maindiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#leftdiv h1 {
+  font-size: 1.8rem;
+  color: #000000;
+  margin: 0;
+}
+
+
+.links a {
+  margin: 3px;
+  text-decoration: none;
+  color: var(--textclrDark);
+  padding: 10px 15px;
+  position: relative;
+  border-radius: 5px;
+  transition: background-color 500ms ease-in-out;
+  font-weight: 600;
+}
+
+.links a:hover {
+  background-color: var(--secondary);
+  color: white;
+  transition: 500ms ease-in-out;
+}
+
+
+.links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background-color: var(--secondary);
+  bottom: 0;
+  border-radius: 5px;
+  left: 0;
+  transition: width 300ms ease-in-out;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+main {
+  min-height: 100vh;
+  padding: 120px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+main .container {
+  max-width: 100%;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+#data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+ul.shadow-lg {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+ul.shadow-lg li {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.transaction-li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.transaction-box {
+  position: relative;
+  background-color: rgba(58, 58, 58, 0.15);
+  padding: 40px 5%;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-date {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.transaction-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.transaction-values p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 6px 0;
+  width: 2px;
+  height: 22px;
+  background-color: black;
+}
+
+.amount,
+.card-name-text,
+.code,
+.new-balance-amount {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+
+.nameDIV {
+  margin-top: 100px;
+}
+
+.transaction-li {
+  margin: 10px;
+}
+
+.transactions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+
+#sidebar-checkbox {
+  display: none;
+}
+
+#open-sidebar,
+#close-sidebar {
+  display: none;
+}
+
+.headiv svg {
+  fill: var(--textclrDark);
+}
+
+#open-sidebar {
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+  main .container {
+    width: 70%;
+  }
+
+  #leftdiv h1 {
+    font-size: 1.5rem;
+
+  }
+
+  #data ul.shadow-lg {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul.shadow-lg li,
+  .divider {
+    margin: 10px 0;
+  }
+
+  .values {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1000;
+    height: 100vh;
+    width: 300px;
+    transition: 0.75s ease-in-out;
+    background-color: var(--prim);
+    box-shadow: -5px 0 5px var(--prim);
+  }
+
+  .links a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+    margin-left: 320x;
+    margin-top: 20px;
+    color: white;
+  }
+
+  #sidebar-checkbox:checked~.links {
+
+    right: 0;
+  }
+
+  #sidebar-checkbox:checked~.overlay {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: #f15156a0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    transition: 0.75s ease-in-out;
+  }
+
+  #open-sidebar,
+  #close-sidebar {
+    padding: 20px;
+    display: block;
+  }
+
+  .header {
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+
+
+  /* .headiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+} */
+
+  /* #mainimg {
+    height: 35px;
+    margin-right: 10px;
+} */
+
+  .mainheader {
+    display: none;
+  }
+
+
+
+
+  #maindiv {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .links a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+
+
+
+
+
+  main .container {
+    width: 90%;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .input-field,
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #transaction {
+    padding: 30px 6%;
+  }
+
+  #transaction #date {
+    font-size: 14px;
+  }
+
+  #transaction #amount-holder,
+  #transaction #card-name,
+  #transaction #card-last4,
+  #transaction #new-balance {
+    font-size: 14px;
+  }
+}
+
+
+#notif-text {
+  font-size: 1.2rem;
+}
+
+
+
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
